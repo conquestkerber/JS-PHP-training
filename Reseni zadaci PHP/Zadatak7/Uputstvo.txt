@@ -1,0 +1,6 @@
+1. Kreirati bazu podataka "zadatak7"
+2. Izvrsiti date SQL skripte
+3. Iskopirati ceo sadrzaj foldera Zadatak7 u WWW root WAMP servera
+4. Pokrenuti stranicu index.html na localhost serveru
+5. Za prikaz postojecih podataka kliknuti na dugme Prikaz
+6. Pratiti komentare u kodu

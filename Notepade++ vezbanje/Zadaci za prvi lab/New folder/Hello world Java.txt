@@ -1,0 +1,27 @@
+
+class Vozilo
+{
+private:
+   int stanje;
+   int brzina;
+public:
+   int max_brzina;
+public:
+    Vozilo();
+	Vozilo(int max);
+	void iskljuci();
+	void ukljuci();
+	void ubrzaj();
+	void uspori();
+	friend bool uporediBrzine(Vozilo& v1,Vozilo& v2)
+	{
+	   if(v1.max_brzina>v2.max_brzina)
+	     return 1;
+	   else
+	     return 0;
+		 
+	}
+	
+	friend void ispisiKarakteristike(Vozilo& v);
+
+}

@@ -1,0 +1,8 @@
+Napraviti Javascript klasu HelpProvider koja služi za prikazivanje help teksta u popup prozoru (koristiti alert() ) kad se prede mišem preko odredenog elementa na strani. Klasa rekurzivno traži sve HTML elemente na strani (pocevši od body elementa) koji imaju atribut helptext i njima registruje da se na onmouseover dogadaj pozove metoda drawHelp objekta klase HelpProvider (napraviti spregu DOM -> JS). Takodje sadržaj ovakvih elemenata podvuci (stilski atribut text-decoration treba biti underline).
+ Na proizvoljnoj HTML strani ispisati proizvoljan tekst i nekolicini elemenata dodati helptext atribute. Npr:
+<span helptext="Elektronski fakultet">elfak</span>
+Napomena:
+•	Ispitivanje da li HTML element (node) ima atribut helptext:
+if (node.attributes != null && node.attributes["helptext"] != null)
+•	Vrednost helptext atributa elementa node:
+node.attributes["helptext"].value

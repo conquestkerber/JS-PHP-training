@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Strana za prvi kolokvijum!</title>
+<link rel="stylesheet" href="main.css">
+<script type="text/javascript" src="mojScript.js"></script>
+<script language="javascript">
+<!--
+function Start()
+{
+	//Funkcija za kreiranje dinamickog menija
+	var dMenu = new DynamicMenu();
+	dMenu.Create("Leva");
+	dMenu.AddItem('Google','http://www.google.com','');
+	dMenu.AddItem('Yahoo','http://www.yahoo.com','');
+	dMenu.Draw();
+}
+//-->
+</script>
+</head>
+
+<bodY onload="Start()">
+<table id="Tabela">
+	<tr>
+		<td id="Leva">
+		</td>
+		<td id="Sredina">Sredina
+		</td>
+		<td id="Desna">Desna
+		</td>
+	</tr>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+ZADATAK 1 U Javascript-u napraviti klasu Parser. Klasa treba da se instancira na Web strani posle njenog ucitavanja, i zatim ce rekurzivno da parsira sadržaj te Web strane i da izvrši sledece promene:
+•	Svakom span elementu ciji je roditeljski element div, dodati css klasu nested. Ova klasa definiše da je pozadinska boja crvena, a da su slova bele boje.
+•	Svakom span elementu koji ima atribut isvalid i cija je vrednost true, dodati css klasu validated. Ova klasa definiše da su slova zelene boje.
+
+<span isvalid=”true” >Elektronski fakultet</span>
+
+Napomena:
+•	Ispitivanje da li HTML element (node) ima atribut “nekiatribut”:
+if (node.attributes != null && node.attributes["nekiatribut"] != null)
+•	Vrednost helptext atributa elementa node:
+node.attributes["nekiatribut"].value

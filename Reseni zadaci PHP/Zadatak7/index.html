@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+    <head>
+        <title>Studenti</title>
+        <!--Ukljucivanje JQuery biblioteke -->
+        <script src="scripts/jquery-1.11.1.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body style="background-color: #FFFF99">
+        <table id="tabela_studenti"><tr><td></td></tr></table>
+        <input id="prikaz" type="button" value="Prikaz" name="prikaz">
+        <input id="brisanje" type="button" value="Brisanje" name="brisanje">
+
+        <table id="tabela_unos">
+            <tr><td>Indeks:</td><td><input type="text" id="indeks" name="indeks"/></td></tr>
+            <tr><td>Ime:</td><td><input type="text" id="ime" name="ime"/></td></tr>
+            <tr><td>Prezime:</td><td><input type="text" id="prezime" name="prezime"/></td></tr>
+            <tr><td>Godina:</td>
+                <td>
+                    <select name="godina" id="godina">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input id="prosledi" type="button" value="Prosledi" name="prosledi">
+
+        <script>
+            // Definicije funkcija za obradu dogadaja
+            $(function() {
+                // Selektor $("#prikaz") bira dugme ciji je id="prikaz"
+                // i "vezuje" se na click dogadjaj.
+                $("#prikaz").click(function(){
+                    // Klikom na dugme prikaz se preuzima lista svih studenata sa servera.
+                    // Koristi se JQuery funkcija ajax sa najcesce koriscenim parametrima
+                    $.ajax({
+                        type: "GET",  //HTTP metod. Ravnopravno moze da se koristi GET i POST.
+                        dataType: "json", // Ako se na serverskoj starni korisiti json_encode, ovde se obavezno navodi da je tip podataka JSON.
+                        url: "vrati_sve_studente.php", //URL PHP stranice koju izvrsava AJAX
+                        data: {}, // Podaci koji se prosledjuju sa klijenta serveru. U ovom slucaju nema potrebe za tim.
+                        // Pod error parametrom se zadaje funkcija koja se izvrsava ako dodje do greske u komunikaciji sa serverom. 
+                        // Ovde je funkcija zadata "inline".
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            alert(textStatus + ": " + errorThrown);
+                        },
+                        // Ako je komunikacija bila uspesna izvrsice se dole definisana funkcija prikaz.
+                        // Ovde nije zadata cela funkcija - samo "pokazivac" na funkciju. Ova 2 nacina se
+                        // mogu ravnopravno koristiti.
+                        success: Prikaz
+                    });
+                });
+
+                // Analogno prethodnoj funkciji, ova se izvrsava klikom na dugme Brisanje.
+                $("#brisanje").click(function(){
+                    // Trazi se student koji je Radio kontrolom oznacen za brisanje.
+                    // Value ove kontrole je broj indeksa studenta.
+                    var oznacen = $("#oznaci:checked").val();
+                    if (oznacen == null)
+                    {
+                        // Ako selektor nije pronasao cekiranu Radio kontrolu prikazuje se
+                        // poruka o tome.
+                        alert("Nije izabran student za brisanje.");
+                    }
+                    else
+                    {
+                        // U suprotnom se izvrsava AJAX poziv
+                        $.ajax({
+                            type: "GET",
+                            dataType: "json",
+                            url: "obrisi_vrati_sve_studente.php",
+                            // Za razliku od prethodnog AJAX poziva ovde se kao podatak serveru
+                            // prosledjuje indeks studenta za brisanje.
+                            data: {"indeks":oznacen},
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                alert(textStatus + ": " + errorThrown);
+                        },
+                        success: Prikaz
+                    });
+                    }
+                });
+
+                // Analogno prethodnim funkcijama, ova se izvrsava klikom na dugme Prosledi.
+                $("#prosledi").click(function(){
+                    // Izvlacenje podataka iz input kontrola.
+                    var indeks = $("#indeks").val();
+                    var ime = $("#ime").val();
+                    var prezime = $("#prezime").val();
+                    var godina = $("#godina").val();
+
+                    // Provera validnosti podataka. 
+                    if (!indeks){
+                        alert("Nije zadat broj indeksa.");
+                    }
+                    else if (!ime){
+                        alert("Nije zadato ime.");
+                    }
+                    else if (!prezime){
+                        alert("Nije zadato prezime.");
+                    }
+                    else
+                    {
+                        // Ako su svi podaci validni izvrsava se AJAX poziv.
+                        $.ajax({
+                            type: "POST",
+                            dataType: "json",
+                            url: "dodaj_vrati_sve_studente.php",
+                            // Za razliku od prethodnih AJAX poziva ovde se serveru
+                            // prosledjuje niz podataka. 
+                            data: {"indeks":indeks, "ime":ime, "prezime":prezime, "godina":godina},
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                alert(textStatus + ": " + errorThrown);
+                        },
+                        success: Prikaz
+                    });
+                    }
+                });
+            });
+
+             //Javascript funkcija koja ce se izvrsiti ako je komunikacija klijenta sa serverom bila uspesna.
+            function Prikaz (studenti) {
+                if (studenti == 'greska') {
+                    // Ukoliko je doslo do neke greske na samom serveru (npr. prilikom komunikacije
+                    // sa bazom u povratnoj promenljivoj se nalazi samo string 'greska'
+                    alert("Greska u radu sa bazom podataka")
+                }
+                else {
+                    // U suprotnom u povratnoj promenljivoj se nalazi niz objekata tipa student.
+                    // Sledeca linija selektuje tabelu po id-u i u nju ubacuje samo zaglavlje.
+                    $("#tabela_studenti").html("<tr><th>Indeks</th><th>Ime</th><th>Prezime</th><th>Godina</th><th></th></tr>");
+                    // JQuery iteracija kroz niz objekata, za svaki element u nizu se dodaje
+                    // vrsta u tabeli.
+                    $.each(studenti, function(i, student){
+                        $("#tabela_studenti").append("<tr><td>" + student.indeks + "</td><td>" + student.ime + "</td><td>"
+                            + student.prezime + "</td><td>" + student.godina + "</td><td>"
+                            + "<input type='radio' name='oznaci' id='oznaci' value='" + student.indeks + "'/> </td></tr>");
+                    });
+                    // Vrednosti u input kontrolama se resetuju. 
+                    $("#indeks").val("");
+                    $("#ime").val("");
+                    $("#prezime").val("");
+                    $("#godina").val("1");
+                }
+            }
+        </script>
+    </body>
+</html>

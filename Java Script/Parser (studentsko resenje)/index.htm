@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Grupa C</title>
+		<link rel="stylesheet" href="main.css" />
+		<script type="text/javascript" src="ms.js"></script>
+		<script>
+			function start()
+			{	
+				var p = new Parser();
+				p.izmeni(document.body);
+			}
+		</script>
+	</head>
+	<body onload="start()">
+		<div>Prvi div<span>span1</span><span>span2</span></div>
+		<div>Drugi div<span>span3</span><span>span4</span></div>
+		<span isvalid="true">span5</span>
+		<span>span6</span>
+		<div>Treci div<span isvalid="true">span7</span></div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+ .glavniKontejner{
+	 height:400px;
+	 width:700px;
+	 background-color:red;
+ }
+ 
+ .neparnaUlica{
+	 height:33%;
+	 width:100%;
+	 background-color:blue;
+ }
+ 
+ .ulica{
+	 height:33%;
+	 width:100%;
+	 background-color:yellow;
+ }
+ 
+ .parnaUlica{
+	 height:33%;
+	 width:100%;
+	 background-color:green;
+ }
+ 
+ .objekat{
+	 height:40px;
+	 width:40px;
+	 background-color:gray;
+	 float:left;
+	 margin:5px;
+ }

@@ -1,0 +1,16 @@
+HTML
+
+<!doctype html>
+<html>
+<head>
+    <title>Prvi kolokvijum</title>
+    <link rel="stylesheet" href="stil.css" />
+</head>
+<body>
+    <div id="main">
+    </div>
+    
+    <script src="main.js"></script>
+    <script src="funkcije.js"></script>
+</body>
+</html>

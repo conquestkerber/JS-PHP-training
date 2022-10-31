@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Dynamic Layout</title>
+		<script type = "text/javascript" src = "DynamicLayout.js">
+		</script>
+		<link rel = "stylesheet" href = "style.css">	
+		
+	</head>
+	<body onload="start()">
+	<script type = "text/javascript">
+	function start()
+	{
+		var dizajn = new DynamicLayout(true, NavigationAlignment.Right);
+		dizajn.Render();
+		dizajn.SetTitle("Dynamic Layout");
+		
+		//dizajn.SetTitleHeight(70);
+		
+		// prebaci navigaciju ulevo
+		//dizajn.AlignNavigation(NavigationAlignment.Left);
+
+	}
+	</script>
+	</body>
+</html>

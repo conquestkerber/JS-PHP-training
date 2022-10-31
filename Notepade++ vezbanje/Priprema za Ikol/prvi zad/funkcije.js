@@ -1,0 +1,36 @@
+function mouseOut(element)
+{
+	if(!element)
+		return;
+	element.innerHTML="Mis je otisao";
+}
+
+function pressButton(parentElement)
+{
+	if(!parentElement)
+		throw Error("Nema tog elementa");
+	var list=parentElement.querySelectorAll("div");
+	list.forEach(function(item))
+	{
+		item.className="left";
+	}
+}
+
+function selekcijaElemenata()
+{
+	var elementi=document.querySelectorAll("&panel .panel");
+	console.log("Broj elementa" + element.length);
+	
+	var el=document.querySelectorAll(".panel[data-uloga='vazno']");
+	console.log("Paneli sa atributom vazno imaju id=" + el.id);
+	
+	el=document.querySelectorAll("&panel .panel");
+	console.log("Koji je ovo element" + el.id);
+	
+	elementi = document.querySelectorAll("#paneli div:not(.panel)");
+	
+	elementi.forEach(function(e))
+	{
+		console.log("Elementi iz #panel cija klasa nije panel " +el.id);
+	}
+}

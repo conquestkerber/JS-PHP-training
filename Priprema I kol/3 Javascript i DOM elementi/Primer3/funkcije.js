@@ -1,0 +1,84 @@
+
+var cenaTorte = new Array();
+// ili var cenaTorte = [];
+ cenaTorte["Round8"]=200;
+ cenaTorte["Round12"]=300;
+ cenaTorte["Round16"]=400;
+ cenaTorte["Round30"]=800;
+ 
+ 
+  var cenaUkusa= new Array();
+ cenaUkusa["None"]=0;
+ cenaUkusa["Čokoladna"]=100;
+ cenaUkusa["Karamela"]=100;
+ cenaUkusa["Lešnik"]=150;
+ cenaUkusa["Voćna"]=150;
+ cenaUkusa["Doboš"]=200;
+ 
+function sakrijUkupnuCenu()
+{
+    var divobj = document.getElementById('UkupnaCena');
+    divobj.style.display='none';
+}
+
+function izracunajCenuZaVelicinu()
+{  
+    var cenaVelicina=0;
+    var odabranaTorta = document.querySelectorAll('input[value][type="radio"]:not([value=""])');
+    for(var i = 0; i < odabranaTorta.length; i++)
+    {
+        if(odabranaTorta[i].checked)
+        {
+            cenaVelicina = cenaTorte[odabranaTorta[i].value];
+            break;
+        }
+    }
+    return cenaVelicina;
+
+}
+
+function izracunajCenuZaUkus()
+{
+    var cenaUkusaDin=0;
+
+	var odabraniUkus = document.querySelectorAll('option:checked');
+    cenaUkusaDin = cenaUkusa[odabraniUkus[0].value];
+    return cenaUkusaDin;
+}
+
+function cenaSvecica()
+{
+    var cenaSvecice = 0;
+    var ukljuciSvecice = document.getElementById('ukljuci_svecice');
+    if(ukljuciSvecice.checked==true)
+    {
+        cenaSvecice = 50;
+    }
+    return cenaSvecice;
+}
+
+function cenaDostave()
+{
+
+    var cenaDostava = 0;
+    var ukljuciDostavu = document.getElementById('ukljuci_dostavu');
+    if(ukljuciDostavu.checked==true){
+        cenaDostava = 200;
+    }
+    return cenaDostava;
+}
+
+function IzracunajUkupnuCenu()
+{
+
+    var cenaTorte = izracunajCenuZaVelicinu() + izracunajCenuZaUkus() + cenaSvecica() + cenaDostave();
+    var divobj = document.getElementById('UkupnaCena');
+    divobj.style.display = 'block';
+    divobj.innerHTML = "Ukupna cena odabrane torte je " + cenaTorte + " dinara";
+}
+
+function IzracunajUkupnuCenuSubmit()
+{
+IzracunajUkupnuCenu();
+return false;
+}

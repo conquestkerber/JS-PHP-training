@@ -1,0 +1,23 @@
+HTML
+
+<!doctype>
+<html>
+<head> 
+   <title> Primer1 </title>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="primer1.css">
+</head>
+<body>
+  <div id="paneli">
+     <div id="d1" class="panel">Prvi panel</div>
+	 <div id="d2" class="panel">Drugi panel </div>
+	 <div id="d3" class="panel">Treci panel </div>
+	 <div id="d4" class=" nije panel">Cetvrti panel </div>
+	 <div id="d5" class="nije panel">Peti panel </div>
+      <input type="text" id="t1" name="text"/>
+      <button id="b1">Promeni </button>
+  </div>
+   <script src="funkcije.js"></script>
+   <script src="main.js"> </script>
+</body>
+</html>

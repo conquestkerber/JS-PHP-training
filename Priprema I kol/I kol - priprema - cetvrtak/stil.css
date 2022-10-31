@@ -1,0 +1,18 @@
+.Biljka{
+border: solid 2px;
+margin: 5px;
+float: left;
+width: 50px;
+height: 50px;
+}
+.Red{
+clear: both;
+}
+.Levi{
+width: 70%;
+float:left;
+}
+.Desni{
+width: 30%;
+float: left;
+}

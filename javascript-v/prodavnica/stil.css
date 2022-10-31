@@ -1,0 +1,14 @@
+
+#main{
+    float: left;
+    margin: 10px;
+}
+
+
+table,tr, th, td 
+{
+	border-style: solid; border-width: 1px;
+	background-color: #f1f1c1;
+	text-align: center;
+}
+

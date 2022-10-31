@@ -1,0 +1,57 @@
+#tab
+{
+	width:60%;
+	border: 1.5px solid black;
+	border-collapse:collapse;
+	float:left;
+	margin:20px;
+}
+
+#tab th, td
+{
+	width:10%;
+	border:1.5px solid black;
+	text-align:left;
+}
+
+#dugme
+{
+	vertical-align:middle;
+}
+
+#tab td
+{
+	vertical-align:middle;
+}
+
+#dodatno
+{
+	width:15%;
+	margin-left:20px;
+	float:left;
+}
+
+.in
+{
+	float:right;
+}
+
+#sn
+{
+	margin-left:50px;
+}
+
+#prazan
+{
+	clear:both;
+}
+
+#dole
+{
+	margin:20px;
+}
+
+#doledole
+{
+	margin:20px;
+}

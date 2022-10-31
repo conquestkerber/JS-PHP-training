@@ -1,0 +1,79 @@
+body,html
+{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+h1
+{
+	margin:0;
+
+}
+header
+{
+	color:black;
+	background-color:red;
+	margin:0;
+	padding:0;
+	height:10%;
+	
+}
+#sadrzaj {
+	color:black;
+	background-color:white;
+	padding:0;
+	margin:0;
+	height:80%;
+	background-image:url('https://www.srbijadanas.com/sites/default/files/16831/img_3120.jpg');
+	background-position:center-left;
+	background-repeat:no-repeat;
+	background-size:150px 150px;
+}
+#sadrzaj1
+{
+	color:green;
+	background-color:yellow;
+	padding:0;
+	margin:0;
+	float:right;
+}
+a
+{
+	text-decoration:none;
+}
+a:hover
+{
+	color:red;
+	text-decoration:underline;
+}
+
+#nav {
+	color:black;
+	background-color:yellow;
+	float:left;
+	padding:0;
+	margin:0;
+	height:82%;
+	background-image:url('https://www.srbijadanas.com/sites/default/files/16831/img_3120.jpg');
+	background-position:right bottom;
+	background-repeat:no-repeat;
+	background-size:50px 50px;
+	
+}
+footer
+{
+	margin:0;
+	padding:0;
+	color:white;
+	background-color:black;
+	height:10%;
+}
+table,tr,th,td
+{
+	border:1px solid black;
+}
+table{
+	margin:auto;
+}
+  
+	

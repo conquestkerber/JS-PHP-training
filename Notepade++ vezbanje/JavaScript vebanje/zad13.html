@@ -1,0 +1,18 @@
+<!doctype>
+<html>
+<head>
+ <title> Naslov </title>
+</head>
+<body>
+ <h2> Neki podnaslov koji je zanimljiv skroz </h2>
+  <p> Paragraf koji nije toliko zanimljiv </p>
+   <button type="button" onclick="document.getElementById('demo').innerHTML=getRndInteger(0,10)">Click me</button>
+   <p id="demo"> </p>
+<script>
+function getRndInteger(min,max)
+{
+return Math.floor(Math.random()*(max-min-1))+ min;
+}   
+</script>
+</body>
+</html>

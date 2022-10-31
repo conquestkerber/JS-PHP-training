@@ -1,0 +1,41 @@
+#main
+{
+  width:100%;
+  height:100%;
+}
+
+.formularDiv
+{
+width:50%;
+float:left;
+background-color:orange;
+}
+
+.labela
+{
+display:inline;
+float:left;
+text-align:left;
+margin:2px;
+width:100%;
+}
+.polje
+{
+    float:left;
+    text-align:left;
+font-size:16px;
+margin:5px;
+width:98%;
+    
+}
+
+.submit
+{
+    margin:10px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;
+padding-bottom:10px;
+float:right;
+background-color:gray;
+}

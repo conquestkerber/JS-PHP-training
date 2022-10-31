@@ -1,0 +1,36 @@
+#main {
+	width:100%;
+	height:100%;
+}
+.labela{
+	display:inline;
+	float:left;
+	background-color:orange;
+}
+.polje{
+	float:left;
+	text-align:left;
+	font-size:16px;
+	margin:5px;
+	width:97%;
+	background-color:white;
+	
+}
+
+.submit{
+	margin:10px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	float:right;
+	background-color:pink;
+}
+
+.formularDiv
+{
+	width:50%;
+	float:left;
+	background-color:orange;
+}
+

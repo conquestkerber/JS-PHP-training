@@ -1,0 +1,46 @@
+<!doctype>
+<html>
+  <head> naslov </head>
+</html>
+<style>
+ #conteiner {
+   width:400px;
+   height:400px;
+   position:relative;
+   background:yellow;
+ }
+ #animal {
+   width:120px;
+   height:120px;
+   position:absolute;
+   background:red;
+ }
+ </style>
+ <body>
+  <p>
+  <button onclick ="myMove()">Click me </button>
+  </p>
+  <div id="conteiner">
+  <div id="animal"></div>
+  </div>
+  
+  <script>
+   function myMove() {
+   var elem=document.getElementById("animal");
+   var pos = 0;
+   var id = setInterval(frame,5);
+   function frame() {
+     if(pos == 350) {
+	 clearInerval(id);
+	 }
+	 else
+	 {
+	  pos++;
+	  elem.style.top=pos + 'px';
+	  elem.style.left= pos + 'px';
+	  }
+	  }
+	  }
+	  </script>
+ </body>
+ </html>

@@ -1,0 +1,18 @@
+#Tabela {
+	height: 100%; 
+	width: 100%
+}
+#Leva {
+	background:url('slika.jpg') bottom repeat-x #c4df9b; 
+	vertical-align:top
+}
+#Sredina {
+	width:793px; 
+	background-color:#14df9b;  
+	vertical-align:top
+}
+	
+#Desna {
+	background:url('slika.jpg') bottom repeat-x #c4df9b; 
+	vertical-align:top
+}

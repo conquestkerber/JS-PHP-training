@@ -1,0 +1,70 @@
+CAKEFORM.HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Narucivanje torte</title>
+    <link href="cakeform.css" rel="stylesheet" />
+</head>
+<body >
+    <div id="wrap">
+        <form action="" id="form_torta" onsubmit="return false;">
+        <div>
+            <div class="narudzbina_detalji">
+               <fieldset>
+                <legend>Naruci tortu</legend>
+					<label >Velicin torte</label>
+					<label class='radiodugme'><input type="radio"  name="odabrana_torta" value="Round8" />Okrugla torta - 8 parcica(200 dinara)</label><br/>
+					<label class='radiodugme'><input type="radio"  name="odabrana_torta" value="Round12" />Okrugla torta - 12 parcica(300 dinara)</label><br/>
+					<label class='radiodugme'><input type="radio"  name="odabrana_torta" value="Round16"  />Okrugla torta - 16 parcica(400 dinara))</label><br/>
+					<label class='radiodugme'><input type="radio"  name="odabrana_torta" value="Round30" />Okrugla torta - 30 parcica(800 dinara)</label><br/>
+                <br/>
+				
+                <label >Ukus</label>
+                <select id="ukus" name='ukus'>
+                <option value="None">Odaberite ukus</option>
+                <option value="Cokoladna">Cokoladna(100 dinara)</option>
+                <option value="Karamela">Karamela(100 dinara)</option>
+                <option value="Lešnik">Lešnik(150 dinara)</option>
+                <option value="Vocna">Vocna(150 dinara)</option>
+                <option value="Doboš">Doboš(200 dinara)</option>
+
+               </select>
+                <br/>
+                <p>
+                <label for='includecandles' class="inlinelabel">Dodati svecice(50 dinara)</label>
+               <input type="checkbox" id="ukljuci_svecice" name='ukljuci_svecice' />
+               </p>
+               
+                <p>
+                <label class="inlinelabel" for='includedelivery'>Isporuka na kucnu adresu(200 dinara)</label>
+                <input type="checkbox" id="ukljuci_dostavu" name="ukljuci_dostavu" />
+                <input type="text"  id="napomena" name="dodatna_napomena" value="Napomena"  />
+                </p>
+                <div id="UkupnaCena"></div>
+                
+                </fieldset>
+            </div>
+            
+        	<div class="kontakt_detalji">
+            	<fieldset>
+                <legend>Kontakt detalji</legend>
+                <label for='name'>Ime</label>
+                <input type="text" id="name" name='name' />
+                <br/>
+                <label for='address'>Adresa</label>
+                <input type="text" id="address" name='address' />
+                <br/>
+                <label for='phonenumber'>Broj telefona</label>
+                <input type="text"  id="phonenumber" name='phonenumber'/>
+                <br/>
+                </fieldset>
+            </div>
+            <input type='submit' id='submit' value='Submit' />
+        </div>  
+       </form>
+	</div><!--End of wrap-->
+<script src="main.js" ></script>
+<script src="funkcije.js" ></script>
+</body>
+</html>

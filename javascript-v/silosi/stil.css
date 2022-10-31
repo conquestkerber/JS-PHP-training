@@ -1,0 +1,42 @@
+ .kontejnerSilosa{
+	 height:400px;
+	 width:100px;
+	 background-color:red;
+	 float:left;
+	 margin:10px;
+ }
+ 
+ .kapacitetSilosa{
+	 height:15%;
+	 width:100%;
+	 background-color:yellow;
+ }
+ 
+ .silos{
+	 height:85%;
+	 width:100%;
+	 background-color:gray;
+ }
+ 
+ .proizvod
+ {
+	 width:100%;
+	 
+	 background-color:blue;
+ }
+
+ .glavniKontejner{
+	 height:500px;
+	 width:60%;
+	 background-color:red;
+	 text-align:center;
+	 float:left;
+	 
+ }
+ 
+ .kontejnerUnosa{
+	 height:500px;
+	 width:200px;
+	 background-color:blue;
+	 float:left;
+ }

@@ -1,0 +1,25 @@
+INDEX.HTML
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+            <link rel="stylesheet"  href="primer2.css" />
+	
+</head>
+
+
+	<body >
+	
+	<div id="main">
+		
+	</div>
+	
+	<script src="main.js" ></script>
+
+	<script src="funkcije.js" ></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+*{
+	text-align:center;
+}
+
+.kontejnerIzvestaja{
+	height:85%;
+	width:50px;
+	margin:10px;
+	float:left;
+	background-color:white;
+}
+
+.kontejnerStubaIzvestaja{
+	height:93%;
+	width:100%;
+	background-color:blue;
+}
+
+.stub{
+	
+	width:100%;
+	background-color:white;
+}
+
+.okvir{
+	height:300px;
+	width:700px;
+	/*background-color:gray;*/
+}
+
+.y{
+	height:100%;
+	width:7%;
+	float:left;
+	/*background-color:green;*/
+}
+
+.kontejnerRadnika{
+	height:100%;
+	width:90%;
+	float:left;
+	/*background-color:yellow;*/
+}
+
+.nazivRadnika{
+	height:30px;
+	width:100%;
+	/*background-color:red;*/
+}
+
+.informacije{
+	background-color:white;
+	height:200px;
+	width:100%;
+}
+
+@media (max-width:700px)
+{
+	.kontejnerRadnika{
+		width:400px;
+	}
+}
+
+@media (max-width:425px)
+{
+	.kontejnerRadnika{
+		width:300px;
+	}
+}
+
+@media (max-width:350px)
+{
+	.kontejnerRadnika{
+		width:250px;
+	}
+}

@@ -1,0 +1,30 @@
+.naslov{
+	height:10%; 
+	background-color:#333333;
+	text-align: center;
+	color:white;
+	font-family:georgia, times roman;
+	font-size: 28px;
+}
+.centar{
+	height:500px;
+}
+
+.navigacija{	
+	height:90%;
+	width:200px;
+	background-color:#aaaaaa;
+}
+
+.sadrzaj{
+	height:90%;
+	background-color:#f3f3f3;
+}
+
+a{	
+	text-decoration: none;
+}
+
+a:hover{
+	background-color:#FF3300;
+}

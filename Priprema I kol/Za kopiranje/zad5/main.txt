@@ -1,0 +1,10 @@
+MAIN
+
+window.onload=function()
+{
+	var r = new Radnik("pera","peric");
+	r.dodajIzvestaj(new Izvestaj(2015,5000,"jan"));
+	r.dodajIzvestaj(new Izvestaj(2015,7000,"feb"));
+	r.dodajIzvestaj(new Izvestaj(2015,8000,"mar"));
+	r.crtaj(document.getElementById("main"));
+}

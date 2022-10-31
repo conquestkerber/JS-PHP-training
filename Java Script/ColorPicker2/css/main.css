@@ -1,0 +1,33 @@
+#wrapper {
+	width: 800px;
+	margin: auto;
+}
+
+.favorites {
+	background: #bbb;
+	float: left;
+	width: 300px;
+	height: 100%;
+	padding: 2px;
+}
+
+.controls {
+	float: left;
+	background: #aaa;
+	width: 300px;
+	height: 100%;
+	padding: 2px;
+}
+
+.favPreview {
+	width: 50px;
+	height: 50px;
+	border: 1px solid yellow;
+	margin: 3px;
+	background: gray;
+}
+
+.color_preview {
+	width: 200px;
+	height: 200px;
+}
